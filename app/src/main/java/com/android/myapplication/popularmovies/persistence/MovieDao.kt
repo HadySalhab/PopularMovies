@@ -11,9 +11,9 @@ public interface MovieDao {
     @Delete
     suspend fun deleteMovie(movie: MovieEntity)
 
-    @Query("SELECT * FROM MovieEntity WHERE id = :id")
+    @Query("SELECT * FROM movie WHERE id = :id")
     suspend fun getMovieById(id: Long): MovieEntity?
 
-    @Query("SELECT * FROM MovieEntity")
+    @Query("SELECT * FROM movie")
     fun getAllMovies(): LiveData<List<MovieEntity>>
 }

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 import com.android.myapplication.popularmovies.api.model.Genre
 import com.google.gson.annotations.SerializedName
 
-@Entity
+@Entity(tableName = "movie")
 data class MovieEntity(
 
     @PrimaryKey
