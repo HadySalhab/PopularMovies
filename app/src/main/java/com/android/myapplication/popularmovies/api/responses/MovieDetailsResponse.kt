@@ -46,6 +46,9 @@ data class MovieDetailsResponse(
     @SerializedName("status")
     val status: String? = null,
 
+    @SerializedName("runtime")
+    val runtime:Int=0,
+
     @SerializedName("videos")
     val videoResponse: VideoResponse? = null,
 
