@@ -3,12 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.MovieListFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingEnd="@dimen/very_small_dim"
+        android:paddingStart="@dimen/very_small_dim"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="100"
+        tools:listitem="@layout/movie_list_item"
+         />
 
 </FrameLayout>
