@@ -14,6 +14,6 @@ public interface MovieDao {
     @Query("SELECT * FROM MovieEntity WHERE id = :id")
     suspend fun getMovieById(id: Long): MovieEntity?
 
-    @Query("SELECT * FROM movieentity")
+    @Query("SELECT * FROM MovieEntity")
     fun getAllMovies(): LiveData<List<MovieEntity>>
 }
